@@ -1,0 +1,23 @@
+{
+  "users": [
+
+    {
+      "EmailAddress": "jdoe@example.com",
+      "Password" : "password"
+    },
+
+    {
+      "EmailAddress": "toli@dcmail.ca",
+      "Password" : "tolihat"
+    },
+
+    {
+      "EmailAddress": "admin@example.com",
+      "Password" : "12345"
+    }
+  ]
+
+
+
+
+}

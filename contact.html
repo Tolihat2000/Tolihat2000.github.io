@@ -1,0 +1,85 @@
+<!--
+Author: Tolihat Gbadebo
+Course Code: INFT2202
+Filename: contact.html
+Date: January 24th, 2024
+Description: This is the contact page for Assignment 01 website.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Tolihat Gbadebo">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact</title>
+    <!-- CSS Section -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="content/style.css">
+</head>
+<body>
+
+<header></header>
+
+
+<main class="container">
+    <h2><i class="fa-solid fa-address-card"></i>Contact Us</h2>
+
+    <div id="messageArea"></div>
+    <div id="messageRedirect"></div>
+
+    <div id="countdownModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal content goes here -->
+                <div class="modal-body">
+                    <!-- Modal body content goes here -->
+                        Redirecting in 5 seconds...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-lg-center g-3">
+        <form class="col-lg-6 col-md-10 col-sm-10" id="contactForm">
+            <div class="input-group mb-3">
+                <span class="input-group-text">Full Name</span>
+                <input id="fullName" name="fullName" type="text" class="form-control" aria-describedby="Full Name" aria-label="Full Name Input" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Email</span>
+                <input id="emailAddress" name="emailAddress" type="email" class="form-control" aria-describedby="Email Address" aria-label="Email Address Input" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Subject</span>
+                <input id="subject" name="subject" type="text" class="form-control" aria-describedby="subject" aria-label="Subject Input" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Your Message/Feedback</span>
+                <input id="message" name="message" class="form-control" aria-describedby="message" aria-label="Message Input">
+            </div>
+
+            <button id="sendButton" type="submit" class="btn btn-primary"><i class="fa-solid fa-envelope-open"></i> Submit</button>
+            <button id="cancelButton" type="reset" class="btn btn-warning"><i class="fa-solid fa-arrows-rotate"></i> Cancel</button>
+        </form>
+
+    </div>
+</main>
+
+<!-- Scripting Section -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./scripts/namespace.js"></script>
+<script src="scripts/main.js"></script>
+
+
+<footer></footer>
+</body>
+</html>
