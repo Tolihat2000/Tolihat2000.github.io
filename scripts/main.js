@@ -62,9 +62,6 @@ Description: This is the javascript code for the website called 'HARMONY HUB'
     });
 
 
-
-
-
 // function to verify user in login page
 
 function VerifyLoginPage() {
