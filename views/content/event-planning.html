@@ -1,0 +1,87 @@
+
+    <div>
+        <h1><i class="fa-regular fa-calendar"></i> Event Planning</h1>
+
+    </div>
+    <div>
+        <section class="upcoming-events">
+            <h2>Upcoming Events</h2>
+            <ul id="eventsList">
+                <li class="event-item">
+                    <h3>Community Picnic</h3>
+                    <p>Date: April 15, 2024</p>
+                    <p>Join us for a fun community picnic at Harmony Park. Bring your favorite dish to share and enjoy games, music, and great company!</p>
+                </li>
+
+                <li class="event-item">
+                    <h3>Movie Night Under the Stars</h3>
+                    <p>Date: May 3, 2024</p>
+                    <p>Experience the magic of cinema outdoors! Join us for a movie night under the stars at Central Park. Snuggle up with blankets and popcorn provided, and enjoy a screening of a family-friendly movie.</p>
+                </li>
+
+                <li class="event-item">
+                    <h3>Art Exhibition Opening Reception</h3>
+                    <p>Date: June 12, 2024</p>
+                    <p>Join us for the opening reception of our latest art exhibition featuring works by local artists. Explore diverse art forms, mingle with artists, and enjoy refreshments as we celebrate creativity in our community.</p>
+                </li>
+
+                <li class="event-item">
+                    <h3>Summer Concert Series Kickoff</h3>
+                    <p>Date: July 8, 2024</p>
+                    <p>Get ready for a summer of music! Join us for the kickoff of our summer concert series at Riverside Park. Bring your lawn chairs and dance along to live performances by talented musicians from our area.</p>
+                </li>
+
+                <li class="event-item">
+                    <h3>Volunteer Cleanup Day</h3>
+                    <p>Date: August 20, 2024</p>
+                    <p>Help keep our community clean and green! Join us for a volunteer cleanup day at various locations throughout the city. Gloves, bags, and refreshments will be provided. Let's work together to make a positive impact!</p>
+                </li>
+
+
+            </ul>
+        </section>
+
+    </div>
+    <br/>
+
+
+    <form id="loginForm" novalidate>
+    <div class="form-group mb-3">
+        <h4><i class="fa-regular fa-calendar-times"></i> Add New Events</h4>
+        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="fa fa-calendar-check">
+                            </i>
+                          </span>
+            <input type="text" id="eventName" name="eventName" placeholder="Event Name" required>
+        </div>
+
+    </div>
+
+    <div class="form-group mb-3">
+        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="fa fa-calendar-week">
+                            </i>
+                          </span>
+            <input type="datetime-local" id="eventDate" name="eventDate" required>
+        </div>
+
+    </div>
+        <div class="form-group mb-3">
+        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="fa fa-calendar-alt">
+                            </i>
+                          </span>
+            <textarea id="eventDescription" name="eventDescription" rows="4" placeholder="Event Description" required></textarea>
+
+        </div>
+
+    </div>
+    <div class="text-right">
+        <button id="loginButton" type="submit" class="btn btn-primary btn-lg"><i class = "fa-regular fa-paper-plane"></i>  Plan Event</button>
+        <button id="cancelButton" type="reset" class="btn btn-warning btn-lg"><i class = "fas fa-undo"></i>  Cancel</button>
+
+    </div>
+    </form>

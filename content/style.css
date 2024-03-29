@@ -6,6 +6,147 @@ Date: January 18th, 2024
 Description: This is css file for this website
 */
 
+.upcoming-events {
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px;
+
+}
+
+.event-item {
+    border-bottom: 1px solid #ddd; /* Light grey line */
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.event-item h3 {
+    color: #007bff; /* Light blue text */
+}
+
+.event-item p {
+    color: #333; /* Dark grey text */
+}
+
+
+
+#event-body{
+    background-image: url("images/event.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250vh;
+}
+
+/* General Form Styling */
+#loginForm {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-group-addon {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.input-group input,
+.input-group textarea {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
+    padding: 0.75rem 0.75rem 0.75rem 3rem; /* Make space for icon */
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Button Styling */
+.btn {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-warning {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+.btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    border-radius: 0.3rem;
+}
+
+.fa-calendar-check, .fa-calendar-week, .fa-calendar-alt, .fas {
+    color: #007bff;
+}
+
+.text-right {
+    text-align: right;
+}
+
+
 #welcome-text {
     position: absolute;
     top: 50%;

@@ -1,5 +1,5 @@
 {
-  "name": "Tolihat",
+  "name": "tolihat",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Tolihat2000 <tolihatgbadebo111@gmail.com>",
@@ -8,6 +8,15 @@
     "@fortawesome/fontawesome-free": "^6.5.1",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.2",
+    "fs": "^0.0.1-security",
     "jquery": "^3.7.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "@types/jquery": "^3.5.29"
   }
 }

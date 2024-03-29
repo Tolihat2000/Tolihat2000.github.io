@@ -1,0 +1,46 @@
+<!--
+Author: Tolihat Gbadebo
+Course Code: INFT2202
+Filename: statistics.html
+Date: March 24th, 2024
+Description: This is the statistics page for Assignment 03 website.
+-->
+
+    <div>
+        <h2><i class="fa-solid fa-chart-simple"></i> Statistics</h2>
+    </div>
+<br/>
+    <div >
+        <canvas id="statistics-chart" style="width:100%;max-width:1000px"></canvas>
+    </div>
+<br/>
+<script>
+    const xValues = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEPT","OCT","NOV","DEC"];
+    const yValues = [7,8,8,9,12,9,15,11,11,14,10,9];
+
+    new Chart("statistics-chart", {
+        type: "line",
+        data: {
+            labels: xValues,
+            datasets: [{
+                fill: false,
+                lineTension: 0,
+                backgroundColor: "rgba(0,0,255,1.0)",
+                borderColor: "rgba(0,0,255,0.1)",
+                data: yValues
+            }]
+        },
+        options: {
+            legend: {display: false},
+            scales: {
+                yAxes: [{ticks: {min: 6, max:16}}],
+            }
+        }
+    });
+</script>
+    <div>
+        <ul>
+            <li><b><i>Visitors' Statistics for January 2023 - December 2023</i></b></li>
+        </ul>
+
+    </div>
