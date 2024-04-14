@@ -1,5 +1,5 @@
 "use strict";
-
+var core;
 (function (core) {
     class User {
         constructor(emailAddress = "", password = "") {

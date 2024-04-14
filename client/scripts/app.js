@@ -1,21 +1,21 @@
 /*
 Author: Tolihat Gbadebo
 Course Code: INFT2202
-Filename: main.js
+Filename: app.js
 Date: January 18th, 2024
 Description: This is the javascript code for the website called 'HARMONY HUB'
 */
 "use strict";
 
+
 // IIFE = Immediately Invoked Functional Expression
 (function(){
-
 
 
     function capitalizeFirstCharacter(str) {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
-    function LoadHeader() {
+    function LoadHeader(){
         $.get("./views/components/header.html", function (html_data) {
             $("header").html(html_data);
             document.title = capitalizeFirstCharacter(router.ActiveLink);
@@ -24,7 +24,7 @@ Description: This is the javascript code for the website called 'HARMONY HUB'
             CheckLogin();
         });
     }
-    function LoadContent() {
+    function LoadContent(){
         let page_name = router.ActiveLink;
         let callback = ActiveCallback();
         $.get(`./views/content/${page_name}.html`, function (html_data) {
@@ -33,12 +33,12 @@ Description: This is the javascript code for the website called 'HARMONY HUB'
             callback();
         });
     }
-    function LoadFooter() {
+    function LoadFooter(){
         $.get("./views/components/footer.html", function (html_data) {
             $("footer").html(html_data);
         });
     }
-    function Start() {
+    function Start(){
         console.log("App Started");
         LoadHeader();
         LoadLink("home");
@@ -46,7 +46,7 @@ Description: This is the javascript code for the website called 'HARMONY HUB'
     }
     window.addEventListener("load", Start);
 
-    function LoadLink(link, data = "") {
+    function LoadLink(link, data = ""){
         router.ActiveLink = link;
         AuthGuard();
         router.LoadLink = data;
@@ -75,7 +75,7 @@ Description: This is the javascript code for the website called 'HARMONY HUB'
         }
     }
 
-    function AddLinkEvents(link) {
+    function AddLinkEvents(link){
         let linkQuery = $(`a.link[data=${link}]`);
         linkQuery.off("click");
         linkQuery.off("mouseover");
@@ -97,10 +97,10 @@ Description: This is the javascript code for the website called 'HARMONY HUB'
         let navLinks = $("ul>li>a");
         navLinks.off("click");
         navLinks.off("mouseover");
-        navLinks.on("click", function () {
+        navLinks.on("click", function (){
             LoadLink($(this).attr("data"));
         });
-        navLinks.on("mouseover", function () {
+        navLinks.on("mouseover", function (){
             $(this).css("cursor", "pointer");
         });
     }
@@ -128,49 +128,48 @@ Description: This is the javascript code for the website called 'HARMONY HUB'
                 break;
         }
     }
-    function Display404Page() {
+    function Display404Page(){
         console.log("Called Display404Page()");
     }
-    function DisplayServicePage() {
+    function DisplayServicePage(){
         console.log("Called DisplayServicePage()");
-    }    function DisplayHomePage() {
+    }    function DisplayHomePage(){
         console.log("Called DisplayHomePage()");
-    }    function DisplayBlogPage() {
+    }    function DisplayBlogPage(){
         console.log("Called DisplayBlogPage()");
-    }    function DisplayCareerPage() {
+    }    function DisplayCareerPage(){
         console.log("Called DisplayCareerPage()");
-    }    function DisplayContactPage() {
+    }    function DisplayContactPage(){
         console.log("Called DisplayContactPage()");
-    }    function DisplayEventPlanningPage() {
+    }    function DisplayEventPlanningPage(){
         console.log("Called DisplayEventPlanningPage()");
-    }    function DisplayGalleryPage() {
+    }    function DisplayGalleryPage(){
         console.log("Called DisplayGalleryPage()");
-    }    function DisplayPortfolioPage() {
+    }    function DisplayPortfolioPage(){
         console.log("Called DisplayPortfolioPage()");
     }
-    function DisplayStatisticsPage() {
+    function DisplayStatisticsPage(){
         console.log("Called DisplayStatisticsPage()");
-    }    function DisplayTeamPage() {
+    }    function DisplayTeamPage(){
         console.log("Called DisplayTeamPage()");
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function(){
             // Access the button to open the modal
             const openModalBtn = document.getElementById('openModalBtn');
 
             // Add a click event listener to the button
-            openModalBtn.addEventListener('click', function() {
+            openModalBtn.addEventListener('click', function(){
                 // Open the modal using Bootstrap's modal method
                 $('#memberModal1').modal('show');
             });
         });
-    }    function DisplayTermsPage() {
+    }    function DisplayTermsPage(){
         console.log("Called DisplayTermsPage()");
-    }    function DisplayPrivacyPage() {
+    }    function DisplayPrivacyPage(){
         console.log("Called DisplayPrivacyPage()");
     }
 
-
 // function to generate API request
-    function fetchTranslator() {
+    function fetchTranslator(){
         // Get the message from an input field
         var message = document.getElementById("messageInput").value;
         // DeepL API key
@@ -187,8 +186,8 @@ Description: This is the javascript code for the website called 'HARMONY HUB'
         xhr.setRequestHeader('Authorization', 'DeepL-Auth-Key ' + apiKey);
         xhr.setRequestHeader('Content-Type', 'application/json');
 
-        // Set up a function that is called when the request is compvared
-        xhr.onload = function() {
+        // Set up a function that is called when the request is compared
+        xhr.onload = function(){
             if (xhr.status >= 200 && xhr.status < 300) {
                 // Parse the JSON response
                 var response = JSON.parse(xhr.responseText);
@@ -207,7 +206,7 @@ Description: This is the javascript code for the website called 'HARMONY HUB'
         };
 
         // Set up a function that is called when there is an error with the request
-        xhr.onerror = function() {
+        xhr.onerror = function(){
             // Handle network errors
             console.error("Translation request failed");
             // Optionally, inform the user about the network error
@@ -221,8 +220,8 @@ Description: This is the javascript code for the website called 'HARMONY HUB'
         }));
     }
 
-// Event listener to trigger translation when the page has loaded and the translate button is clicked
-    document.addEventListener('DOMContentLoaded', (event) => {
+// Event listener to trigger translation when the page has loaded and the translation button is clicked
+    document.addEventListener('DOMContentLoaded', (eve)=> {
         document.getElementById('translateButton').addEventListener('click', fetchTranslator);
     });
 
@@ -275,93 +274,91 @@ Description: This is the javascript code for the website called 'HARMONY HUB'
         });
     }
 
-
 // JavaScript for the slideshow
-var currentIndex = 0;
-const slides = document.querySelectorAll('.slide');
+    var currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.display = i === index ? 'block' : 'none';
-    });
-}
+    function showSlide(index) {
+        slides.forEach((slide, i)=> {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
+    }
 
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
-}
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }
 
 // Initial setup
-showSlide(currentIndex);
+    showSlide(currentIndex);
 
 // Automatic slideshow every 5 seconds (adjust as needed)
-setInterval(nextSlide, 5000);
+    setInterval(nextSlide, 5000);
 
-$(document).ready(function() {
-    // Dynamically add 'Careers' link
-    var careersLink = '<li class="nav-item"><a class="nav-link" data="careers">Careers</a></li>';
-    $('.navbar-nav').append(careersLink);
+    $(document).ready(function() {
+        // Dynamically add 'Careers' link
+        var careersLink = '<li class="nav-item"><a class="nav-link" data="careers">Careers</a></li>';
+        $('.navbar-nav').append(careersLink);
 
-    // Programmatically change 'Blog' to 'News'
-    $('#blogLink').text('News');
+        // Programmatically change 'Blog' to 'News'
+        $('#blogLink').text('News');
 
-    // Event handling for form submission
-    $('#contactForm').submit(function(event) {
-        event.preventDefault(); // Prevent default form submission behavior
+        // Event handling for form submission
+        $('#contactForm').submit(function(event){
+            event.preventDefault(); // Prevent default form submission behavior
 
-        if (ContactFormValidation()) {
-            // Display the entered data in a modal
-            $('#formDataDisplay').html(`Full Name: ${$('#fullName').val()}<br>Email: ${$('#emailAddress').val()}`);
-            $('#formModal').modal('show');
+            if (ContactFormValidation()) {
+                // Display the entered data in a modal
+                $('#formDataDisplay').html(`Full Name: ${$('#fullName').val()}<br>Email: ${$('#emailAddress').val()}`);
+                $('#formModal').modal('show');
 
-            // Reset the form fields
-            $('#contactForm')[0].reset();
+                // Reset the form fields
+                $('#contactForm')[0].reset();
 
-            // After form submission, display thank you message with a countdown
-            setTimeout(function() {
-                $("#editButton").html(`<i class ="fas fa-plus-circle fa-sm"/>Add`);
-                $('#messageRedirect').html('Thank you for your message/feedback. You will be redirected to the Home page.').addClass("alert alert-success");
-                $('#countdownModal').modal('show');
+                // After form submission, display thank you message with a countdown
+                setTimeout(function() {
+                    $("#editButton").html(`<i class ="fas fa-plus-circle fa-sm"/>Add`);
+                    $('#messageRedirect').html('Thank you for your message/feedback. You will be redirected to the Home page.').addClass("alert alert-success");
+                    $('#countdownModal').modal('show');
 
-                var counter = 5;
-                var interval = setInterval(() => {
-                    $('#countdownTimer').text(counter);
-                    counter--;
-                    if (counter < 0) {
-                        clearInterval(interval);
-                        LoadLink("home"); // Redirect to the Home page
-                    }
+                    var counter = 5;
+                    var interval = setInterval(()=> {
+                        $('#countdownTimer').text(counter);
+                        counter--;
+                        if (counter < 0) {
+                            clearInterval(interval);
+                            LoadLink("home"); // Redirect to the Home page
+                        }
+                    }, 1000);
                 }, 1000);
-            }, 1000);
-        }
+            }
+        });
     });
-});
-
 
 
 // Contact form validation
-function ContactFormValidation() {
-    var isValid = true;
-    isValid = ValidateField("#fullName", /^([A-Z][a-z]{1,3}\.?\s)?([A-Z][a-z]+)+([\s,-]([A-Z][a-z]+))*$/, "Ensure to Enter a Valid First Name and Last Name") && isValid;
-    isValid = ValidateField("#emailAddress", /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,10}$/, "Ensure to Enter a Valid Email Address") && isValid;
-    return isValid;
-}
+    function ContactFormValidation() {
+        var isValid = true;
+        isValid = ValidateField("#fullName", /^([A-Z][a-z]{1,3}\.?\s)?([A-Z][a-z]+)+([\s,-]([A-Z][a-z]+))*$/, "Ensure to Enter a Valid First Name and Last Name") && isValid;
+        isValid = ValidateField("#emailAddress", /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,10}$/, "Ensure to Enter a Valid Email Address") && isValid;
+        return isValid;
+    }
 
 // Validate individual form fields
-function ValidateField(input_field_id, regular_expression, error_message) {
-    var inputField = $(input_field_id);
-    var messageArea = $("#messageArea").hide();
-    var inputFieldText = inputField.val();
+    function ValidateField(input_field_id, regular_expression, error_message) {
+        var inputField = $(input_field_id);
+        var messageArea = $("#messageArea").hide();
+        var inputFieldText = inputField.val();
 
-    if (!regular_expression.test(inputFieldText)) {
-        inputField.trigger("focus").trigger("select");
-        messageArea.addClass("alert alert-danger").text(error_message).show();
-        return false;
-    } else {
-        messageArea.removeAttr("class").hide();
-        return true;
+        if (!regular_expression.test(inputFieldText)) {
+            inputField.trigger("focus").trigger("select");
+            messageArea.addClass("alert alert-danger").text(error_message).show();
+            return false;
+        } else {
+            messageArea.removeAttr("class").hide();
+            return true;
+        }
     }
-}
 
     function CheckLogin() {
         if (sessionStorage.getItem("user")) {
@@ -371,13 +368,12 @@ function ValidateField(input_field_id, regular_expression, error_message) {
 
 
         // Add event listener to logout link
-        $("#logout").on("click", function() {
+        $("#logout").on("click", function(){
             // Clear session storage and redirect to login page
             sessionStorage.clear();
             location.href = "/login";
         });
     }
-
 
     /*
     function AjaxRequest(method, url, callback) {
@@ -398,9 +394,5 @@ function ValidateField(input_field_id, regular_expression, error_message) {
     AjaxRequest("GET", "header.html", LoadHeader);
     AjaxRequest("GET", "footer.html", LoadFooter);
     */
-
-
-
-
 
 })();
